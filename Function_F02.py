@@ -9,35 +9,21 @@ REGISTER HERE
 #Mengecek Data Unik
 def check_unique(username):
     file = Parser.fill()
-    # name_valid= True
     username_valid = True
     # password_valid = True 
     for i in range (Parser.row):
-        # if(file[i][0]== nama):
-        #     name_valid = False
         if(file[i][2]==username):
             username_valid = False
-        # if(file[i][2]==password):
-        #     password_valid = False
     return (username_valid)
 
 #Mengecek Data Invalid
 def check_datainput(username):
-    # name_valid= True
-    # username_valid = True
-    # password_valid = True 
-    # for i in nama :
-    #     if((i>"9" and i< "A") or (i>"Z" and i<"a") or i>"z" or i != "_" or i != "-" or i<"0" ):
-    #         name_valid = False
     for i in username :
         if((i>="0" and i<="9") or (i>="A" and i<="Z") or (i>="a" and i<="z") or i=="-" or i=="_"):
             username_valid = True
         else:
             username_valid = False
             break
-    # for i in password :
-    #     if((i>"9" and i< "A") or (i>"Z" and i<"a") or i>"z" or i != "_" or i != "-" or i<"0" ):
-    #         password_valid = False
     return (username_valid)
             
 
