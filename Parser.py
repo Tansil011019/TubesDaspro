@@ -4,29 +4,30 @@
 #Fungsi fill dapat digunakan untuk mengconvert komponen csv menjadi matriks
 
 #Menentukan dimensi csv
-f = open("user_file.csv", "r")
+def row(x):
+    f = open(x, "r")
 
-col = 1 #kolom
-row = 0 #baris
-x = True
+    col = 1 #kolom
+    row = 0 #baris
+    x = True
 
-for i in f: 
-    for j in i:
-        if x :
-            if (j == ";"):
-                col += 1 
-    x = False
-    row+=1
+    for i in f: 
+        # for j in i:
+        #     if x :
+        #         if (j == ";"):
+        #             col += 1 
+        # x = False
+        row+=1
 
-f.close()
+    f.close()
+    return row
 
 #Mengisi file dengan csv
-def fill ():
-    f = open("user_file.csv", "r")
+def fill (x):
+    f = open(x, "r")
     l=0
     m=0
-    file = [["" for j in range (col)]for i in range (row)]
-
+    file = [["" for j in range (6)]for i in range (row(x))]
 
     for i in f:
         for j in i:
