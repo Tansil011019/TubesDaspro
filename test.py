@@ -6,7 +6,7 @@ import F05
 import Parser
 
 # F04.tambahgame()
-F05.ubah_game()
+# F05.ubah_game()
 # F02.register()
 # F03.login()
 # F03.mencobasesuatu()
