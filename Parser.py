@@ -40,3 +40,9 @@ def fill (x):
 
     f.close()
     return(file)
+
+#Menghapus File
+def delete(x):
+    f= open(x, "w")
+    f.write("")
+    f.close()
