@@ -4,6 +4,7 @@ import F02
 import F03
 import F05
 import Parser
+import Game_Tic_Tac_Toe
 
 # F04.tambahgame()
 # F05.ubah_game()
@@ -13,3 +14,4 @@ import Parser
 # F03.hanya_admin()
 # F03.hanya_user()
 # Parser.delete("game_file.csv")
+Game_Tic_Tac_Toe.tic_tac_toe()
