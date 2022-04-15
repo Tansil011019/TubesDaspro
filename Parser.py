@@ -31,7 +31,7 @@ def fill (x):
 
     for i in f:
         for j in i:
-            if(j != ";"):
+            if(j != ";") and (j!="\n"):
                 file[l][m] += j
             else :
                 m+=1

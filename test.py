@@ -14,4 +14,4 @@ import Game_Tic_Tac_Toe
 # F03.hanya_admin()
 # F03.hanya_user()
 # Parser.delete("game_file.csv")
-Game_Tic_Tac_Toe.tic_tac_toe()
+# Game_Tic_Tac_Toe.tic_tac_toe()
