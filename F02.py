@@ -12,10 +12,10 @@ def register():
     nama = input("Masukan nama: ")
     username = input("Masukan username: ")
     password = input("Masukan password: ")
-    num = Parser.row("user_file.csv") + 1
-    f = open("user_file.csv", "a")
+    num = Parser.row("user.csv") + 1
+    f = open("user.csv", "a")
     if(component.check_datainput(username)):
-        if(component.check_unique(username, 2, "user_file.csv")):
+        if(component.check_unique(username, 2, "user.csv")):
             f.write(str(num)+";"+nama+";"+username+";"+password+";"+"user"+";"+"0"+"\n")#Saldo = 0 karena belum ada
             print("Username {} telah berhasil register ke dalam “Binomo”.".format(username))
         else:

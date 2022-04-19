@@ -24,19 +24,19 @@ def check_datainput(x):
 #Mengecek apakah sudah terdaftar
 def check_validation(x, kolumx, y, kolumy, z):
     matrix = Parser.fill(z)
-    for i in range (Parser.row("user_file.csv")):
+    for i in range (Parser.row(z)):
         if(x == matrix[i][kolumx] and y == matrix[i][kolumy]):
-            x = True
+            z = True
             break
         else:
-            x = False
-    return x
+            z = False
+    return z
 
 #Mengecek Lokasi
-def check_location(x, kolum):
-    matrix = Parser.fill("user_file.csv")
+def check_location(x, kolum, z):
+    matrix = Parser.fill(z)
     sum = 0
-    for i in range (Parser.row("user_file.csv")):
+    for i in range (Parser.row(z)):
         if(x == matrix[i][kolum]):
             break
         else:
@@ -45,7 +45,7 @@ def check_location(x, kolum):
 
 #Mengecek admin dan user
 def check_admin():
-    matrix = Parser.fill("user_file.csv")
+    matrix = Parser.fill("user.csv")
     if log_activity():
         username = Parser.fill("data_user_login.csv")
         if(matrix[check_location(username[0][0],2)][4]=="admin"):

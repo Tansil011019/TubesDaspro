@@ -13,13 +13,13 @@ def login():
     username = input("Masukan username: ")
     password = input("Masukan password: ")
 
-    matrix = Parser.fill("user_file.csv")
+    matrix = Parser.fill("user.csv")
 
     f= open("data_user_login.csv", "a")
     #Konfirmasi User
-    if component.check_validation(username, 2, password, 3, "user_file.csv"):
+    if component.check_validation(username, 2, password, 3, "user.csv"):
         f.write(username+";")
-        print("Halo {}! Selamat datang di \"Binomo\"". format(matrix[component.check_location(username, 2)][1]))
+        print("Halo {}! Selamat datang di \"Binomo\"". format(matrix[component.check_location(username, 2, "user.csv")][1]))
     else :
         print("Password dan username salah atau tidak ditemukan.")
 

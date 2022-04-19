@@ -14,7 +14,7 @@ def tambahgame():
         print("Mohon masukkan semua informasi mengenai game agar dapat disimpan BNM0.")
         tambahgame()
     else:
-        id = Parser.row("game_file.csv")+1
+        id = Parser.row("game.csv")+1
         id = str(id)
         len = component.strlen(id)
         new_id= ["" for i in range(3)]
@@ -28,7 +28,7 @@ def tambahgame():
         for i in range(component.strlen(new_id)):
             id_str += new_id[i]
         # print(id_str, id, len, new_id)
-        f= open("game_file.csv", "a")
+        f= open("game.csv", "a")
         f.write("Game"+id_str+";"+nama_game+";"+kategori+";"+str(tahun)+";"+harga+";"+str(stok)+"\n")
         f.close()
         print("Selamat! Berhasil menambahkan game {}.".format(nama_game))

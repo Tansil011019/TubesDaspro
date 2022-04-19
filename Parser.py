@@ -1,6 +1,6 @@
 #ReadME
 #Parcell mengconvert elemen csv menjadi matriks
-#Hasil yang dapat di pake adalah dimensi row dan col serta file yang digunakan adalah user_file.csv
+#Hasil yang dapat di pake adalah dimensi row dan col serta file yang digunakan adalah user.csv
 #Fungsi fill dapat digunakan untuk mengconvert komponen csv menjadi matriks
 
 #Menentukan dimensi csv

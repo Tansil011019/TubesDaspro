@@ -13,9 +13,9 @@ def ubah_game():
     if id == "" :
         print("Mohon input ID.")
     else :
-        loc= component.check_location(id,0)
-        matrix = Parser.fill("game_file.csv")
-        len = Parser.row("game_file.csv")
+        loc= component.check_location(id,0,"game.csv")
+        matrix = Parser.fill("game.csv")
+        len = Parser.row("game.csv")
         if(nama_game!=""):
             matrix[loc][1]= nama_game
         if(kategori != ""):
@@ -24,10 +24,10 @@ def ubah_game():
             matrix[loc][3]= tahun
         if(harga != ""):
             matrix[loc][4]= harga
-        Parser.delete("game_file.csv")
-        f= open("game_file.csv", "a")
+        Parser.delete("game.csv")
+        f= open("game.csv", "a")
         for i in range(len):
-            f.write(matrix[i][0]+";"+matrix[i][1]+";"+matrix[i][2]+";"+matrix[i][3]+";"+matrix[i][4]+";"+matrix[i][5])
+            f.write(matrix[i][0]+";"+matrix[i][1]+";"+matrix[i][2]+";"+matrix[i][3]+";"+matrix[i][4]+";"+matrix[i][5]+"\n")
         f.close()
-        # for i in range (Parser.row("game_file.csv")):
+        # for i in range (Parser.row("game.csv")):
         #     print(matrix[i][0])
