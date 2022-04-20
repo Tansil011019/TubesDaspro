@@ -32,4 +32,3 @@ def ubah_stok():
             else: # stok dikurangi
                 x = "dikurangi"
             print(f"Stok game {game[i][1]} berhasil {x}. Stok sekarang: {new_stok}")
-ubah_stok()
