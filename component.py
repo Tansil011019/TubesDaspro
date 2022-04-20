@@ -69,3 +69,20 @@ def strlen(x):
         if (i!=""):
             len +=1
     return len
+
+#Mengecek baris di dalam matrix
+def row_matrix(x):
+    row = 0
+    for i in x:
+        row += 1
+    return row
+
+#Mengetahui indeks pada matriks
+def indeks(str,kolum,matrix):
+    indeks = 0
+    for i in range(row_matrix(matrix)):
+        if(str == matrix[i][kolum]):
+            break
+        else:
+            indeks+=1
+    return indeks
