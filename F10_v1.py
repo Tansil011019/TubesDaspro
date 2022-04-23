@@ -9,6 +9,7 @@ def search_my_game(user_id):
         releaseyearinput = input("Masukkan Tahun Rilis Game: ")
         game = Parser.fill("game.csv")
         kepemilikan = Parser.fill("kepemilikan.csv")
+        count = 0
         print("Daftar game pada inventory yang memenuhi kriteria:")
         # Mengecek role user
         # Mengecek Validasi
