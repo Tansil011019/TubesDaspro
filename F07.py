@@ -1,6 +1,5 @@
 import component
 
-
 def list_game_toko(gameM):
 # { I.S matriks game M terdefinisi }
 # { F.S menampilkan matriks game yang terurut berdasarkan skema sorting inputan user}
