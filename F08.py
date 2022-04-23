@@ -1,4 +1,3 @@
-
 import component
 import datetime
 
@@ -54,11 +53,9 @@ def buy_game(user_id,gameM,userM,kepemilikanM,riwayatM):
             else: # game berhasil dibeli
                 # mengganti data userM, gameM, kepemilikanM, riwayatM
                 userM[i_user][5] = str(saldo_akhir)
-                gameM[i_game][5] = int(gameM[i_game][5])- 1
+                gameM[i_game][5] = str(int(gameM[i_game][5])- 1)
                 kepemilikanM += [kepemilikan]
                 curr_tahun = datetime.datetime.now().year
                 riwayatM += [[id_game,gameM[i_game][1],gameM[i_game][4],user_id,curr_tahun]]
                 print("Game", gameM[i_game][1],"berhasil dibeli!")
     return(gameM, userM, kepemilikanM,riwayatM)
-
-    
