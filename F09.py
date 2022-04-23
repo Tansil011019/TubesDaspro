@@ -2,14 +2,22 @@ import component
 
 def list_game(user_id,kepemilikanM,gameM):
 # Prosedur menampilkan game yang telah dimiliki user
+# { I.S user_id, kepemilikanM, dan gameM sudah terdefinisi }
+# { F.S menampilkan game yang telah dimiliki user }
 
 # KAMUS LOKAL
-# type game : <id_game: string, nama: string, tahun: integer, harga: integer,
-#              stok:integer>
+# type game : <id_game: string, nama: string, tahun: string, harga: string,
+#              stok: string>
 # type user : <user_id: string, username: string, password: string,
-#              saldo:integer>
-# gameM : array [1..N] of game
-# userM : array [1..N] of user
+#              saldo: string>
+# type kepemilikan : < id_game: string, user_id: string>
+# user_id : string
+# row : integer
+# gameM : array [1..row] of game
+# userM : array [1..row] of user
+# kepemilikanM : array [1..row] of kepemilikan
+# found : boolean
+# i_game : integer
 
 # ALGORITMA
     row = component.row_matrix(kepemilikanM)
