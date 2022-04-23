@@ -1,12 +1,15 @@
 import Parser
 import component
+import main
 
 #Login
 def login():
     print("""
-    >>>>>>>>>>
-    LOGIN PAGE
-    >>>>>>>>>>
+  _              _        ___               
+ | |   ___  __ _(_)_ _   | _ \__ _ __ _ ___ 
+ | |__/ _ \/ _` | | ' \  |  _/ _` / _` / -_)
+ |____\___/\__, |_|_||_| |_| \__,_\__, \___|
+           |___/                  |___/  
     """)
 
     #Mengambil input dari pengguna
@@ -22,6 +25,7 @@ def login():
         print("Halo {}! Selamat datang di \"Binomo\"". format(matrix[component.check_location(username, 2, "user.csv")][1]))
     else :
         print("Password dan username salah atau tidak ditemukan.")
+        # main.home()
 
 #Mencoba Sesuatu
 def mencobasesuatu():
@@ -43,4 +47,3 @@ def hanya_admin():
             print("Silahkan")#Terserh mau ngapain
         else :
             print("Maaf, anda tidak memiliki izin untuk menjalankan perintah berikut. Mintalah ke administrator untuk melakukan hal tersebut.")
-

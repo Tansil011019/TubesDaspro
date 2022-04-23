@@ -28,10 +28,12 @@ def tambahgame():
         for i in range(component.strlen(new_id)):
             id_str += new_id[i]
         # print(id_str, id, len, new_id)
-        f= open("game.csv", "a")
-        f.write("Game"+id_str+";"+nama_game+";"+kategori+";"+str(tahun)+";"+harga+";"+str(stok)+"\n")
-        f.close()
-        print("Selamat! Berhasil menambahkan game {}.".format(nama_game))
+        # f= open("game.csv", "a")
+        # f.write("Game"+id_str+";"+nama_game+";"+kategori+";"+str(tahun)+";"+harga+";"+str(stok)+"\n")
+        # f.close()
+        # print("Selamat! Berhasil menambahkan game {}.".format(nama_game))
+        string = "Game"+id_str+";"+nama_game+";"+kategori+";"+str(tahun)+";"+harga+";"+str(stok)+"\n"
+        return string
 
 #Harga Converter
 def harga_int(x):
