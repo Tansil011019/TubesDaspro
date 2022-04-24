@@ -4,12 +4,12 @@
 #Fungsi fill dapat digunakan untuk mengconvert komponen csv menjadi matriks
 
 #Menentukan dimensi csv
-def row(x):
-    f = open(x, "r")
+def row(folder,file):
+    f = open("{}/{}".format(folder, file), "r")
 
     col = 1 #kolom
     row = 0 #baris
-    x = True
+    # x = True
 
     for i in f: 
         # for j in i:
@@ -23,26 +23,26 @@ def row(x):
     return row
 
 #Mengisi file dengan csv
-def fill (x):
-    f = open(x, "r")
+def fill (folder,file):
+    f = open("{}/{}".format(folder, file), "r")
     l=0
     m=0
-    file = [["" for j in range (6)]for i in range (row(x))]
+    file_matrix = [["" for j in range (6)]for i in range (row(folder,file))]
 
     for i in f:
         for j in i:
             if(j != ";") and (j!="\n"):
-                file[l][m] += j
+                file_matrix[l][m] += j
             else :
                 m+=1
         l+=1
         m=0
 
     f.close()
-    return(file)
+    return(file_matrix)
 
 #Menghapus File
-def delete(x):
-    f= open(x, "w")
+def delete(folder,file):
+    f = open("{}/{}".format(folder, file), "w")
     f.write("")
     f.close()

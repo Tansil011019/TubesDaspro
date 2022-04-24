@@ -1,7 +1,7 @@
 import Parser
 import component
 
-def register():
+def register(matrix):
     print("""
   ___          _    _             ___               
  | _ \___ __ _(_)__| |_ ___ _ _  | _ \__ _ __ _ ___ 
@@ -14,16 +14,21 @@ def register():
     nama = input("Masukan nama: ")
     username = input("Masukan username: ")
     password = input("Masukan password: ")
-    num = Parser.row("user.csv") + 1
-    f = open("user.csv", "a")
+    num = component.row_matrix(matrix) + 1
+    # f = open("user.csv", "a")
     if(component.check_datainput(username)):
-        if(component.check_unique(username, 2, "user.csv")):
-            f.write(str(num)+";"+nama+";"+username+";"+password+";"+"user"+";"+"0"+"\n")#Saldo = 0 karena belum ada
+        if(component.check_unique(username, 2, matrix)):
+            matrix += [[str(num), nama, username, password, "user", "0"]]#Saldo = 0 karena belum ada
             print("Username {} telah berhasil register ke dalam “Binomo”.".format(username))
+            return matrix
         else:
             print("Username {} sudah terpakai, silakan menggunakan username lain.".format(username))
+            register(matrix)
     else:
         print("Username hanya dapat mengandung alfabet A-Za-z, underscore “_”, strip “-”, dan angka 0-9.")
+        register(matrix)
 
 
-    f.close()
+    # f.close()
+
+# register()

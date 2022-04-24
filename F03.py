@@ -1,9 +1,9 @@
 import Parser
 import component
-import main
+# from Binomo import home
 
 #Login
-def login():
+def login(matrix):
     print("""
   _              _        ___               
  | |   ___  __ _(_)_ _   | _ \__ _ __ _ ___ 
@@ -16,34 +16,51 @@ def login():
     username = input("Masukan username: ")
     password = input("Masukan password: ")
 
-    matrix = Parser.fill("user.csv")
-
-    f= open("data_user_login.csv", "a")
+    # f= open("data_user_login.csv", "a")
     #Konfirmasi User
-    if component.check_validation(username, 2, password, 3, "user.csv"):
-        f.write(username+";")
-        print("Halo {}! Selamat datang di \"Binomo\"". format(matrix[component.check_location(username, 2, "user.csv")][1]))
+    
+    if component.check_validation(username, 2, password, 3, matrix):
+        # f.write(username+";")
+        print("Halo {}! Selamat datang di \"Binomo\"". format(matrix[component.check_location(username, 2, matrix)][1]))
+        return(True, username)
     else :
         print("Password dan username salah atau tidak ditemukan.")
-        # main.home()
+        # Binomo.page()
+        return(False, "")
 
 #Mencoba Sesuatu
-def mencobasesuatu():
-    if component.log_activity():
-        print("Sudah Login")#Terserah mau buat apa
+def mencobasesuatu(valid):
+    if valid:
+#         print("""
+#  _  _  ___  __  __ ___ 
+# | || |/ _ \|  \/  | __|
+# | __ | (_) | |\/| | _| 
+# |_||_|\___/|_|  |_|___|
+
+# Welcome To Binomo
+# Jika anda tidak mengerti jalan kerja dari mohon panggil fungsi "help"
+#         """)#Terserah mau buat apa
+        return True
     else:
         print("Maaf, anda harus login terlebih dahulu untuk mengirim perintah selain “login”")
+        # home()
+        return False
 
 #Hanya User
-def hanya_user():
-    if component.check_admin():
+def hanya_user(valid):
+    if (valid):
         print("Maaf, anda harus menjadi user untuk melakukan hal tersebut.")
-    else :
-        print("Silahkan")#Terserh mau ngapain
+        return False
+        # home()
+    else:
+        return True
 
 #Hanya Admin
-def hanya_admin():
-        if component.check_admin():
-            print("Silahkan")#Terserh mau ngapain
-        else :
-            print("Maaf, anda tidak memiliki izin untuk menjalankan perintah berikut. Mintalah ke administrator untuk melakukan hal tersebut.")
+def hanya_admin(valid):
+    if not valid:
+        print("Maaf, anda tidak memiliki izin untuk menjalankan perintah berikut. Mintalah ke administrator untuk melakukan hal tersebut.")
+        return False
+        # home()
+    else:
+        return True
+# login()

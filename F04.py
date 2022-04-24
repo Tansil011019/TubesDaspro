@@ -2,7 +2,14 @@ import Parser
 import component
 
 #Tambah Game
-def tambahgame():
+def tambahgame(matrix):
+    print("""
+ ____  ____  __ _   __   _  _  ____   __   _  _   __   __ _     ___   __   _  _  ____       
+(  _ \(  __)(  ( \ / _\ ( \/ )(  _ \ / _\ / )( \ / _\ (  ( \   / __) / _\ ( \/ )(  __)      
+ ) __/ ) _) /    //    \/ \/ \ ) _ (/    \) __ (/    \/    /  ( (_ \/    \/ \/ \ ) _)       
+(__)  (____)\_)__)\_/\_/\_)(_/(____/\_/\_/\_)(_/\_/\_/\_)__)   \___/\_/\_/\_)(_/(____)  
+
+    """)
     #Mengambil input
     nama_game = input("Masukkan nama game: ")
     kategori = input("Masukkan kategori: ")
@@ -12,9 +19,9 @@ def tambahgame():
     #Cek validasi
     if(nama_game == "" or kategori == "" or tahun == "" or harga == "" or stok == ""):
         print("Mohon masukkan semua informasi mengenai game agar dapat disimpan BNM0.")
-        tambahgame()
+        tambahgame(matrix)
     else:
-        id = Parser.row("game.csv")+1
+        id =component.row_matrix(matrix)+1
         id = str(id)
         len = component.strlen(id)
         new_id= ["" for i in range(3)]
@@ -32,8 +39,8 @@ def tambahgame():
         # f.write("Game"+id_str+";"+nama_game+";"+kategori+";"+str(tahun)+";"+harga+";"+str(stok)+"\n")
         # f.close()
         # print("Selamat! Berhasil menambahkan game {}.".format(nama_game))
-        string = "Game"+id_str+";"+nama_game+";"+kategori+";"+str(tahun)+";"+harga+";"+str(stok)+"\n"
-        return string
+        matrix += [["Game"+id_str, nama_game, kategori, str(tahun), harga, str(stok)]]
+        return matrix
 
 #Harga Converter
 def harga_int(x):
