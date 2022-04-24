@@ -7,7 +7,16 @@ def search_my_game(user_id,game,kepemilikan ):
     count = 0
     print("Daftar game pada inventory yang memenuhi kriteria:")
     # Mengecek Validasi
-    if (idgameinput != "" and releaseyearinput != "") or (idgameinput != "" and releaseyearinput == "") : # User hanya mengisi kedua parameter atau hanya ID game
+    if (idgameinput != "" and releaseyearinput != "")  : # User hanya mengisi kedua parameter atau hanya ID game
+        for i in range (component.row_matrix(kepemilikan)):
+            if kepemilikan [i][1] == user_id and kepemilikan [i][0] == idgameinput :
+                for i in range (component.row_matrix(game)) :
+                    if game[i][0] == idgameinput and game [i][3] == releaseyearinput :
+                        print(game[i][0] + " | " + game[i][1] + " | " + game[i][2] + " | " + game[i][3] + " | " + game[i][4])
+                        count = count + 1                
+        if count == 0 : # Tidak ada game yang dimiliki user yang sesuai dengan kriteria
+            print("Tidak ada game pada inventory-mu yang memenuhi kriteria.")
+    elif idgameinput != "" and releaseyearinput == "":
         for i in range (component.row_matrix(kepemilikan)):
             if kepemilikan [i][1] == user_id and kepemilikan [i][0] == idgameinput :
                 for i in range (component.row_matrix(game)) :
