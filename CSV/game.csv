@@ -1,5 +1,4 @@
-id;nama;kategori;tahun_rilis;harga;stok
-GAME001;BNMO - Play Along With Crypto;Adventure;2022;100000;1
+GAME001;BNMO - Play Along With Crypto;Adventure;2021;100000;101
 GAME002;Dasar Pemrograman;Coding;2022;0;10
 GAME011;Python Gemink;Coding;1991;69000;999
 GAME003;Valorant;FPS;2020;50000;3
@@ -8,5 +7,5 @@ GAME005;The Last Of Us;Action;2017;250000;30
 GAME006;Apex Legends;FPS;2019;0;9
 GAME007;Ace Combat;Simulator;2020;25000;10
 GAME008;CSGO;FPS;2013;100000;4
-GAME009;NBA 2K22;Sport;2021;200000;5
+GAME009;NBA 2K22;Sport;2021;200000;0
 GAME010;FIFA 22;Sport;2021;1500000;17

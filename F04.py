@@ -13,9 +13,9 @@ def tambahgame(matrix):
     #Mengambil input
     nama_game = input("Masukkan nama game: ")
     kategori = input("Masukkan kategori: ")
-    tahun = int(input("Masukkan tahun rilis: "))
+    tahun = input("Masukkan tahun rilis: ")
     harga = input("Masukkan harga: ")
-    stok = int(input("Masukkan stok awal: "))
+    stok = input("Masukkan stok awal: ")
     #Cek validasi
     if(nama_game == "" or kategori == "" or tahun == "" or harga == "" or stok == ""):
         print("Mohon masukkan semua informasi mengenai game agar dapat disimpan BNM0.")
@@ -39,7 +39,7 @@ def tambahgame(matrix):
         # f.write("Game"+id_str+";"+nama_game+";"+kategori+";"+str(tahun)+";"+harga+";"+str(stok)+"\n")
         # f.close()
         print("Selamat! Berhasil menambahkan game {}.".format(nama_game))
-        matrix += [["Game"+id_str, nama_game, kategori, str(tahun), harga, str(stok)]]
+        matrix += [["GAME"+id_str, nama_game, kategori, tahun, harga, stok]]
         return matrix
 
 #Harga Converter

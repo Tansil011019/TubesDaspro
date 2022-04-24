@@ -15,6 +15,10 @@ import F14
 import F15
 import F16
 import F17
+import F12
+import F13
+import F10
+import F11
 import Parser
 from Game_Tic_Tac_Toe import tic_tac_toe
 
@@ -79,13 +83,7 @@ Masukkan Nama Fungsi:
         if mencobasesuatu(valid):
             validasi_admin = component.check_admin(user_file, username)
             if hanya_admin(validasi_admin):
-                data = F05.ubah_game(game_file)
-                while True:
-                    if data[0]:
-                        game_file = data[1]
-                        break
-                    else:
-                        data = F05.ubah_game(game_file)
+                game_file = F05.ubah_game(game_file)
                 after()
     elif (pilihan == "ubah_stok"):
         if mencobasesuatu(valid):

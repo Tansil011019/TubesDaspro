@@ -9,7 +9,7 @@ def topup (user) :
                 user[i][5] = int(user[i][5]) + int(topupsaldo)
                 if user[i][5] >= 0 : # saldo user valid(lebih dari atau sama dengan 0)
                     user[i][5] = str(user[i][5])
-                    print('Top up berhasil. Saldo ' + username + ' bertambah menjadi ' + user[i][5] + '.')
+                    print('Top up berhasil. Saldo ' + username + ' berubah menjadi ' + user[i][5] + '.')
                     return user
                 else : # Saldo user tidak valid(kurang dari 0)
                     user[i][5] = int(user[i][5]) - int(topupsaldo)
