@@ -1,3 +1,4 @@
+from F04 import harga_int
 import component
 import datetime
 
@@ -45,7 +46,7 @@ def buy_game(user_id,gameM,userM,kepemilikanM,riwayatM):
         else:    # user belum memiliki game 
             # Mengecek apakah saldo user cukup dan stok game ada
             i_user = component.indeks(user_id,0,userM)
-            saldo_akhir = int(userM[i_user][5])-int(gameM[i_game][4])  
+            saldo_akhir = int(userM[i_user][5])-harga_int(gameM[i_game][4])  
             if int(gameM[i_game][5]) == 0:  #stok game = 0
                 print("Stok Game tersebut sedang habis")
             elif saldo_akhir < 0 : # saldo user kurang untuk membeli game
@@ -56,6 +57,6 @@ def buy_game(user_id,gameM,userM,kepemilikanM,riwayatM):
                 gameM[i_game][5] = str(int(gameM[i_game][5])- 1)
                 kepemilikanM += [kepemilikan]
                 curr_tahun = datetime.datetime.now().year
-                riwayatM += [[id_game,gameM[i_game][1],gameM[i_game][4],user_id,curr_tahun]]
+                riwayatM += [[id_game,gameM[i_game][1],gameM[i_game][4],user_id,str(curr_tahun)]]
                 print("Game", gameM[i_game][1],"berhasil dibeli!")
     return(gameM, userM, kepemilikanM,riwayatM)

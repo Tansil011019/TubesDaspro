@@ -8,6 +8,7 @@ from F03 import hanya_user
 from F16 import save
 from F06 import ubah_stok
 from F07 import list_game_toko
+from F08 import buy_game
 from F09 import list_game
 import F05
 import F14
@@ -86,6 +87,25 @@ Masukkan Nama Fungsi:
                     else:
                         data = F05.ubah_game(game_file)
                 after()
+    elif (pilihan == "ubah_stok"):
+        if mencobasesuatu(valid):
+            validasi_admin = component.check_admin(user_file, username)
+            if hanya_admin(validasi_admin):
+                game_file = ubah_stok(game_file)
+                after()
+    elif (pilihan == "list_game_toko"):
+        if mencobasesuatu(valid):
+            list_game_toko(game_file)
+    elif pilihan == "buy_game":
+        if mencobasesuatu(valid):
+            validasi_user = component.check_admin(user_file, username)
+            if hanya_user(validasi_user):
+                [game_file,user_file,kepemilikan_file,riwayat_file] = buy_game(component.get_user_id(username,user_file),game_file,user_file,kepemilikan_file,riwayat_file)
+    elif pilihan == "list_game":
+        if mencobasesuatu(valid):
+            validasi_user = component.check_admin(user_file, username)
+            if hanya_user(validasi_user):
+                list_game(component.get_user_id(username, user_file), kepemilikan_file, game_file)
     elif(pilihan == "save"):
         if mencobasesuatu(valid):
             save(user_file, game_file, riwayat_file, kepemilikan_file)
