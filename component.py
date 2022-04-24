@@ -85,3 +85,10 @@ def indeks(str,kolum,matrix):
         else:
             indeks+=1
     return indeks
+
+#Mendapatkan user_id dari username
+def get_user_id(username,user_file):
+    row = row_matrix(user_file)
+    for i in range(row):
+        if user_file[i][2] == username:
+            return user_file[i][0]
