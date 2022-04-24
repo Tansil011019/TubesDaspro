@@ -5,7 +5,7 @@ def topup (user) :
     username = input("Masukkan username: ") # Masukkan username yang akan diisi saldonya
     topupsaldo = input("Masukkan saldo: ") # Masukkan jumlah saldo yang akan diisi
     for i in range (len) :
-            if user[i][1] == username: # username ditemukan
+            if user[i][2] == username: # username ditemukan
                 user[i][5] = int(user[i][5]) + int(topupsaldo)
                 if user[i][5] >= 0 : # saldo user valid(lebih dari atau sama dengan 0)
                     user[i][5] = str(user[i][5])
