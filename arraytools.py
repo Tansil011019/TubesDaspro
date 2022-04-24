@@ -28,4 +28,8 @@ def printmatrix(matrix) :
             if (j+1) != kolom :
                 print(data + (" " * (maxlencolumn[j + 1] - panjang_array(data))), end=" | ")
             else :
+<<<<<<< HEAD
                 print(data + (" " * (maxlencolumn[j + 1] - panjang_array(data))))
+=======
+                print(data + (" " * (maxlencolumn[j + 1] - panjang_array(data))))
+>>>>>>> ade5631022edb7529872212d67bb0bd4d79d25d4

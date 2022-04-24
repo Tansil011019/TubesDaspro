@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # import os
 # import csvtools as csvt
 # from time import sleep
@@ -105,3 +106,19 @@ def save(user_file, game_file, riwayat_file, kepemilikan_file):
         print("Saving...")
         time.sleep(2)
         print("Data telah disimpan pada folder ", folder_name, "!")
+=======
+import os
+import csvtools as csvt
+from time import sleep
+
+def save(database):
+    namafolder = input("Masukkan nama folder penyimpanan : ")
+    csvt.writecsv(database[0], namafolder, 'user.csv')
+    csvt.writecsv(database[1], namafolder, 'game.csv')
+    csvt.writecsv(database[2], namafolder, 'riwayat.csv')
+    csvt.writecsv(database[3], namafolder, 'kepemilikan.csv')
+
+    print("Saving...")
+    sleep(2)
+    print("Data telah disimpan pada folder ", namafolder, "!")
+>>>>>>> ade5631022edb7529872212d67bb0bd4d79d25d4

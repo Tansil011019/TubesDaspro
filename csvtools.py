@@ -73,4 +73,8 @@ def isfoldervalid(namafolder) :
     if os.path.exists(foldertujuan) :
         return True
     else :
+<<<<<<< HEAD
         return False
+=======
+        return False
+>>>>>>> ade5631022edb7529872212d67bb0bd4d79d25d4
