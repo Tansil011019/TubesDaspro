@@ -1,3 +1,0 @@
-import Binomo
-
-Binomo.home()

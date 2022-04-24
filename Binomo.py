@@ -6,6 +6,9 @@ from F03 import login
 from F03 import hanya_admin
 from F03 import hanya_user
 from F16 import save
+from F06 import ubah_stok
+from F07 import list_game_toko
+from F09 import list_game
 import F05
 import F14
 import F15
@@ -29,10 +32,10 @@ while x :
     print("""
 __________.__                              
 \______   \__| ____   ____   _____   ____  
-|    |  _/  |/    \ /  _ \ /     \ /  _ \ 
-|    |   \  |   |  (  <_> )  Y Y  (  <_> )
-|______  /__|___|  /\____/|__|_|  /\____/ 
-    \/        \/             \/        
+ |    |  _/  |/    \ /  _ \ /     \ /  _ \ 
+ |    |   \  |   |  (  <_> )  Y Y  (  <_> )
+ |______  /__|___|  /\____/|__|_|  /\____/ 
+      \/        \/             \/        
 Welcome To Binomo
 Jika anda tidak mengerti jalan kerja dari mohon panggil fungsi "help"
 
@@ -74,6 +77,7 @@ Masukkan Nama Fungsi:
     elif(pilihan == "save"):
         if mencobasesuatu(valid):
             save(user_file, game_file, riwayat_file, kepemilikan_file)
+            after()
     else:
         print("Pilihan anda  tidak terdapat pada layanan. Silahkan menuju ke \"help\" untuk mendapatkan informasi pemakaian")
 

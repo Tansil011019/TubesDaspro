@@ -1,23 +1,3 @@
-# import sys, argparse
-# import database
-# def load():
-#     parser = argparse.ArgumentParser()
-#     parser.add_argument("folder")
-#     try:
-#         args = parser.parse_args()
-#         name = args.folder
-#     except:
-#         print("Tidak ada nama folder yang diberikan!\nUsage: python program_binomo.py <nama_folder>")
-#         sys.exit()
-
-#     try:
-#         database.loadCSV(name)
-#     except:
-#         print(f'Folder "{name}" tidak ditemukan')        
-#         sys.exit()
-
-# load()
-
 import argparse
 import Parser
 

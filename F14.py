@@ -1,7 +1,3 @@
-# from msilib.schema import Component
-
-
-import component
 def help() :
         print("""
         Untuk Administrator
