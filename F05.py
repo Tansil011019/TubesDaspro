@@ -20,6 +20,7 @@ def ubah_game(matrix):
     if id == "" :
         print("Mohon input ID.")
         # print(matrix)
+        return(matrix)
     else :
         loc= component.check_location(id,0,matrix)
         # len = Parser.row("game.csv")

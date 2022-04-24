@@ -51,6 +51,7 @@ def save(user_file, game_file, riwayat_file, kepemilikan_file):
         time.sleep(2)
         print("Data telah disimpan pada folder ", folder_name, "!")
     else:
+        os.mkdir(folder_name)
         Parser.delete(folder_name, "user.csv")
         Parser.delete(folder_name, "game.csv")
         Parser.delete(folder_name, "riwayat.csv")
