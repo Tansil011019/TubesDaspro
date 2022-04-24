@@ -37,7 +37,7 @@ def save(user_file, game_file, riwayat_file, kepemilikan_file):
         #     f.write(riwayat_file[i][0]+";"+riwayat_file[i][1]+";"+riwayat_file[i][2]+";"+riwayat_file[i][3]+";",riwayat_file[i][4]+"\n")
         # else:
         for i in range (component.row_matrix(riwayat_file)):
-            f.write(riwayat_file[i][0]+";"+riwayat_file[i][1]+";"+riwayat_file[i][2]+";"+riwayat_file[i][3]+";",riwayat_file[i][4]+"\n")
+            f.write(riwayat_file[i][0]+";"+riwayat_file[i][1]+";"+riwayat_file[i][2]+";"+riwayat_file[i][3]+";"+riwayat_file[i][4]+"\n")
         f.close()
         f= open("{}/{}".format(folder_name, "kepemilikan.csv"), "a")
         # if(component.row_matrix(kepemilikan_file)):
@@ -77,7 +77,7 @@ def save(user_file, game_file, riwayat_file, kepemilikan_file):
         #     f.write(riwayat_file[i][0]+";"+riwayat_file[i][1]+";"+riwayat_file[i][2]+";"+riwayat_file[i][3]+";",riwayat_file[i][4]+"\n")
         # else:
         for i in range (component.row_matrix(riwayat_file)):
-            f.write(riwayat_file[i][0]+";"+riwayat_file[i][1]+";"+riwayat_file[i][2]+";"+riwayat_file[i][3]+";",riwayat_file[i][4]+"\n")
+            f.write(riwayat_file[i][0]+";"+riwayat_file[i][1]+";"+riwayat_file[i][2]+";"+riwayat_file[i][3]+";"+riwayat_file[i][4]+"\n")
         f.close()
         f= open("{}/{}".format(folder_name, "kepemilikan.csv"), "a")
         # if(component.row_matrix(kepemilikan_file)):
