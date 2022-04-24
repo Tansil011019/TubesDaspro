@@ -13,6 +13,7 @@ def help() :
         9. help                 - Untuk memberikan panduan penggunaan sistem
         10. save                - Untuk menyimpan data
         11. exit                - Untuk keluar dari aplikasi
+        12. tictactoe           - Game Tic Tac Toe
         """)
         print("""
         Untuk User
@@ -27,4 +28,5 @@ def help() :
         8. help                 - Untuk memberikan panduan penggunaan sistem
         9. save                 - Untuk menyimpan data
         10. exit                - Untuk keluar dari aplikasi
+        12. tictactoe           - Game Tic Tac Toe
         """)

@@ -16,7 +16,7 @@ import F15
 import F16
 import F17
 import Parser
-import Game_Tic_Tac_Toe
+from Game_Tic_Tac_Toe import tic_tac_toe
 
 def after():
     pilihan = input("Tekan Tombol Enter Untuk Lanjut")
@@ -109,6 +109,10 @@ Masukkan Nama Fungsi:
     elif(pilihan == "save"):
         if mencobasesuatu(valid):
             save(user_file, game_file, riwayat_file, kepemilikan_file)
+            after()
+    elif(pilihan == "tictactoe"):
+        if(mencobasesuatu(valid)):
+            tic_tac_toe()
             after()
     else:
         print("Pilihan anda  tidak terdapat pada layanan. Silahkan menuju ke \"help\" untuk mendapatkan informasi pemakaian")
