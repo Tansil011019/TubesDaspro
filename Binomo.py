@@ -106,30 +106,6 @@ Masukkan Nama Fungsi:
             validasi_user = component.check_admin(user_file, username)
             if hanya_user(validasi_user):
                 list_game(component.get_user_id(username, user_file), kepemilikan_file, game_file)
-        elif(pilihan == "search_my_game"):
-        if mencobasesuatu(valid) :
-            validasi_admin = component.check_admin(user_file, username)
-            if hanya_user(validasi_admin) :
-                user_id = component.get_user_id(username,user_file)
-                F10.search_my_game(user_id, game_file, kepemilikan_file)
-                after()
-    elif(pilihan == "search_game_at_store"):
-        if mencobasesuatu(valid) :
-            F11.search_game_at_store(game_file)
-            after()
-    elif(pilihan == "topup"):
-        if mencobasesuatu(valid) :
-            validasi_admin = component.check_admin(user_file, username)
-            if hanya_admin(validasi_admin) :
-                user_file = F12.topup(user_file)
-                after()
-    elif(pilihan == "riwayat"):
-        if mencobasesuatu(valid) :
-            validasi_admin = component.check_admin(user_file, username)
-            if hanya_user(validasi_admin) :
-                user_id = component.get_user_id(username,user_file)
-                F13.riwayat(user_id,riwayat_file)
-                after()
     elif(pilihan == "save"):
         if mencobasesuatu(valid):
             save(user_file, game_file, riwayat_file, kepemilikan_file)
