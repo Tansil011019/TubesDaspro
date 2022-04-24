@@ -186,6 +186,6 @@ def search_game_at_store(game) :
                 count = count + 1
         if count == 0 : # Tidak ada game yang sesuai kriteria
             print("Game tidak tersedia pada toko")
-     else :  # Menunjukkan semua game di toko
+    else :  # Menunjukkan semua game di toko
         for i in range (len) :
             print(game[i][0] + " | " + game[i][1] + " | " + game[i][4] + " | " + game[i][2] + " | " + game[i][3] + " | " + game[i][5])
