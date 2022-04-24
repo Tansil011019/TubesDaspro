@@ -20,13 +20,13 @@ def register(matrix):
         if(component.check_unique(username, 2, matrix)):
             matrix += [[str(num), nama, username, password, "user", "0"]]#Saldo = 0 karena belum ada
             print("Username {} telah berhasil register ke dalam “Binomo”.".format(username))
-            return matrix
+            return (True,matrix)
         else:
             print("Username {} sudah terpakai, silakan menggunakan username lain.".format(username))
-            register(matrix)
+            return (False, matrix)
     else:
         print("Username hanya dapat mengandung alfabet A-Za-z, underscore “_”, strip “-”, dan angka 0-9.")
-        register(matrix)
+        return (False, matrix)
 
 
     # f.close()

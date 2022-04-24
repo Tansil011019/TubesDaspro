@@ -38,7 +38,7 @@ def tambahgame(matrix):
         # f= open("game.csv", "a")
         # f.write("Game"+id_str+";"+nama_game+";"+kategori+";"+str(tahun)+";"+harga+";"+str(stok)+"\n")
         # f.close()
-        # print("Selamat! Berhasil menambahkan game {}.".format(nama_game))
+        print("Selamat! Berhasil menambahkan game {}.".format(nama_game))
         matrix += [["Game"+id_str, nama_game, kategori, str(tahun), harga, str(stok)]]
         return matrix
 

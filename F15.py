@@ -1,5 +1,6 @@
 import argparse
 import Parser
+import time
 
 def load():
     parser = argparse.ArgumentParser(description="Load CSV Folder")
@@ -19,6 +20,8 @@ def load():
             data_riwayat_matrix = Parser.fill(folder_name, "riwayat.csv")
             data_kepemilikan_matrix =Parser.fill(folder_name, "kepemilikan.csv")
             matrix= [data_user_matrix, data_game_matrix, data_riwayat_matrix, data_kepemilikan_matrix]
+            print("Loading...")
+            time.sleep(1)
             print("Selamat datang di antar muka \"Binomo\"")
             return(matrix)
         except:

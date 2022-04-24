@@ -60,7 +60,13 @@ Masukkan Nama Fungsi:
         if mencobasesuatu(valid):
             validasi_admin = component.check_admin(user_file, username)
             if hanya_admin(validasi_admin):
-                user_file = F02.register(user_file)
+                data = F02.register(user_file)
+                while True:
+                    if data[0]:
+                        user_file = data[1]
+                        break
+                    else:
+                        data = F02.register(user_file)
                 after()
     elif(pilihan == "tambah_game"):
         if mencobasesuatu(valid):
@@ -72,7 +78,13 @@ Masukkan Nama Fungsi:
         if mencobasesuatu(valid):
             validasi_admin = component.check_admin(user_file, username)
             if hanya_admin(validasi_admin):
-                game_file = F05.ubah_game(game_file)
+                data = F05.ubah_game(game_file)
+                while True:
+                    if data[0]:
+                        game_file = data[1]
+                        break
+                    else:
+                        data = F05.ubah_game(game_file)
                 after()
     elif(pilihan == "save"):
         if mencobasesuatu(valid):

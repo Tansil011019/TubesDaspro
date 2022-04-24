@@ -19,7 +19,8 @@ def ubah_game(matrix):
     #Menentukan validasi 
     if id == "" :
         print("Mohon input ID.")
-        ubah_game(matrix)
+        # print(matrix)
+        return (False, matrix)
     else :
         loc= component.check_location(id,0,matrix)
         # len = Parser.row("game.csv")
@@ -31,7 +32,7 @@ def ubah_game(matrix):
             matrix[loc][3]= tahun
         if(harga != ""):
             matrix[loc][4]= harga
-        return matrix
+        return (True, matrix)
         # Parser.delete("game.csv")
         # f= open("game.csv", "a")
         # for i in range(len):
